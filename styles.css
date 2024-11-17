@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    cursor: url("img/cursor.png"), auto;
+    cursor: url("img/cursor1.png"), auto;
     font-family: 'Poppins', Roboto, Arial, sans-serif;
 }
 
@@ -11,6 +11,9 @@ body {
     line-height: 1.6;
     background-color: #f9f9f9;
     color: #333;
+    position: relative;
+    padding-bottom: 6em;
+    min-height: 100vh;
 }
 
 /* Navbar */
@@ -27,7 +30,6 @@ body {
 .navbar .logo img {
     height: 4rem;
     width: auto;
-    cursor: pointer;
     transition: transform 0.2s ease-in-out;
 }
 
@@ -166,7 +168,7 @@ footer {
     text-align: center;
     padding: 20px 0;
     width: 100%;
-    position: fixed;
+    position: absolute;
     bottom: 0;
     left: 0;
     border-top: 4px solid #c94747;
