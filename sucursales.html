@@ -36,12 +36,124 @@
         <section class="welcome">
             <p>Portal de Sucursales</p>
         </section>
+        <form class="grid_form" action="">
+            <div>
+                <label for="nombre_sucursal">Nombre:</label>
+                <input type="text" name="nombre_sucursal" id="nombre_sucursal">
+            </div>
+            <div>
+                <label for="tel_sucursal">Teléfono:</label>
+                <input type="tel" name="tel_sucursal" id="tel_sucursal">
+            </div>
+            <div>
+                <label for="gerente_sucursal">DNI Gerente*:</label>
+                <input type="text" name="gerente_sucursal" id="gerente_sucursal">
+            </div>
+            <div>
+                <label for="dir_sucursal">Dirección:</label>
+                <input type="text" name="dir_sucursal" id="dir_sucursal">
+            </div>
+            <div id="map"></div>
+        </form>
     </main>
 
     <footer>
         <p>Copyright © 2024 Restaurante - Papoan. Todos los derechos reservados.</p>
-        <p><a href="https://www.restaurantepapoan.com/privacy-policy" target="_blank">Política de Privacidad</a> | <a href="https://www.restaurantepapoan.com/terms" target="_blank">Términos y Condiciones</a></p>
+        <p><a href="https://www.restaurantepapoan.com/privacy-policy" target="_blank">Política de Privacidad</a> | <a
+                href="https://www.restaurantepapoan.com/terms" target="_blank">Términos y Condiciones</a></p>
     </footer>
+
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXNCKw3k07Z0QLw2GOuPjajvS0psHVCX0&libraries=places&callback=initAutocomplete"
+        async defer></script>
+
+    <script>
+        // This example adds a search box to a map, using the Google Place Autocomplete
+        // feature. People can enter geographical searches. The search box will return a
+        // pick list containing a mix of places and predicted search terms.
+
+        // This example requires the Places library. Include the libraries=places
+        // parameter when you first load the API. For example:
+        // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+
+        function initAutocomplete() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                // Coordenadas de España
+                center: { lat: 40.463667, lng: -3.74922 }, //{lat: 40.463667, lng: -3.74922},
+                zoom: 5,
+                mapTypeId: 'roadmap'
+            });
+
+            // Create the search box and link it to the UI element.
+            var input = document.getElementById('dir_sucursal');
+            var searchBox = new google.maps.places.SearchBox(input);
+            // map.controls[google.maps.ControlPosition.TOP_LEFT].push(input); // determina la posicion
+
+            // Bias the SearchBox results towards current map's viewport.
+            map.addListener('bounds_changed', function () {
+                searchBox.setBounds(map.getBounds());
+            });
+
+            var markers = [];
+            // Listen for the event fired when the user selects a prediction and retrieve
+            // more details for that place.
+            searchBox.addListener('places_changed', function () {
+                var places = searchBox.getPlaces();
+
+                if (places.length == 0) {
+                    return;
+                }
+
+                // Clear out the old markers.
+                markers.forEach(function (marker) {
+                    marker.setMap(null);
+                });
+                markers = [];
+
+                // For each place, get the icon, name and location.
+                var bounds = new google.maps.LatLngBounds();
+                /*
+                 * Para fines de minimizar las adecuaciones debido a que es este una demostración de adaptación mínima de código, se reemplaza forEach por some.
+                 */
+                // places.forEach(function(place) {
+                places.some(function (place) {
+                    if (!place.geometry) {
+                        console.log("Returned place contains no geometry");
+                        return;
+                    }
+                    var icon = {
+                        url: place.icon,
+                        size: new google.maps.Size(71, 71),
+                        origin: new google.maps.Point(0, 0),
+                        anchor: new google.maps.Point(17, 34),
+                        scaledSize: new google.maps.Size(25, 25)
+                    };
+
+                    // Create a marker for each place.
+                    markers.push(new google.maps.Marker({
+                        map: map,
+                        icon: icon,
+                        title: place.name,
+                        position: place.geometry.location
+                    }));
+
+                    if (place.geometry.viewport) {
+                        // Only geocodes have viewport.
+                        bounds.union(place.geometry.viewport);
+                    } else {
+                        bounds.extend(place.geometry.location);
+                    }
+                    // some interrumpe su ejecución en cuanto devuelve un valor verdadero (true)
+                    return true;
+                });
+                map.fitBounds(bounds);
+            });
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
 </body>
 
 </html>
