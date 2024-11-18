@@ -97,6 +97,44 @@ body {
     color: #666;
 }
 
+/*Formulario Producto*/
+.producto {
+    padding: 20px;
+    margin: 1rem auto;
+    max-width: 900px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.cartaProductos{
+    padding: 20px;
+    margin: 1rem auto;
+    max-width: 900px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.cartaProductos h1{
+    text-align: left;
+}
+
+.imagenesPatatas{
+        background-color: #fff;
+        padding: 1.5rem;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        width: 30%;
+        transition: transform 0.3s ease;
+}
+
+.imagenesPatatas img{
+    height: 4rem;
+    width: auto;
+}
 
 /* Estilo para la sección "Sobre Nosotros" */
 .sobre_nosotros {
