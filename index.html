@@ -1,42 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Restaurante - Papoan">
     <title>Restaurante - Papoan</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="./img/logo.png">
-    <link rel="stylesheet" href="ttps://fonts.googleapis.com/css?">
-    <script src="ap.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
+    <!-- Header con Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html" aria-label="Ir a la página principal">
+                    <img src="./img/logo.png" alt="Logo Restaurante Papoan" />
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="empleado.html">Empleado</a></li>
+                <li><a href="productos.html">Menú</a></li>
+                <li><a href="ingredientes.html">Ingredientes</a></li>
+                <li><a href="sucursales.html">Sucursales</a></li>
+                <li><a href="promociones.html">Promociones</a></li>
+                <li><a href="evento.html">Eventos</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <nav class="navbar">
-        <ul class="nav-links">
-            <li><a href="empleado.html">Empleado</a></li>
-            <li><a href="productos.html">Productos</a></li>
-            <li><a href="ingredientes.html">Ingredientes</a></li>
-            <li><a href="sucursales.html">Sucursales</a></li>
-            <li><a href="promociones.html">Promociones</a></li>
-            <li><a href="evento.html">Eventos</a></li>
-        </ul>
-        <div class="logo">
-            <img src="./img/logo.png" alt="Logo" />
-        </div>
-    </nav>
+    <!-- Contenido principal -->
+    <main class="contenido">
+        <!-- Sección de bienvenida -->
+        <section class="welcome">
+            <h1>Bienvenido a Restaurante - Papoan</h1>
+            <p>Disfruta de la mejor experiencia gastronómica con nosotros. Un lugar donde cada plato cuenta una historia.</p>
+        </section>
 
+        <!-- Sección sobre nosotros -->
+        <section class="sobre_nosotros">
+            <h2>Conoce a Nuestro Equipo</h2>
+            <p>Somos un equipo apasionado por la gastronomía. Conoce a los pilares de nuestro restaurante:</p>
 
-    <section class="content">
-        <h1>Bienvenido a Restaurante - Papoan</h1>
-    </section>
+            <div class="equipo">
+                <div class="miembro_equipo">
+                    <img src="./img/jefe1.jpg" alt="Jose Manuel Payán Gordillo, Fundador y Chef Principal" class="foto_equipo">
+                    <h3>Jose Manuel Payán Gordillo</h3>
+                    <p>Fundador y Chef Principal. Con más de 15 años de experiencia en la cocina, Jose lidera el equipo con su pasión y dedicación.</p>
+                </div>
+                <div class="miembro_equipo">
+                    <img src="./img/jefe2.jpg" alt="Adrian Marquez Bellido, Gerente General" class="foto_equipo">
+                    <h3>Adrian Marquez Bellido</h3>
+                    <p>Gerente General. Encargado de la administración y operaciones, Adrian asegura que cada detalle en el restaurante esté a la perfección.</p>
+                </div>
+                <div class="miembro_equipo">
+                    <img src="./img/jefe3.jpg" alt="Pablo Plazuelo Jimenez, Director de Marketing" class="foto_equipo">
+                    <h3>Pablo Plazuelo Jimenez</h3>
+                    <p>Director de Marketing. Pablo es el encargado de llevar la esencia de Papoan al mundo, creando estrategias innovadoras.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Copyright © 2024 Restaurante - Papoan. Todos los derechos reservados.</p>
+        <p><a href="https://www.restaurantepapoan.com/privacy-policy" target="_blank">Política de Privacidad</a> | <a href="https://www.restaurantepapoan.com/terms" target="_blank">Términos y Condiciones</a></p>
+    </footer>
 </body>
-
-
-<footer>
-    <p>Copyright © 2024 Restaurante - Papoan</p>
-</footer>
 
 </html>
