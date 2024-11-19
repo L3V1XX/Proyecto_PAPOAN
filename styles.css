@@ -83,6 +83,11 @@ section {
     transition: color 0.3s ease;
 }
 
+/*Elemento del menú seleccionado*/
+.nav-links .selected {
+    color: #f3c848;
+}
+
 .nav-links a:hover {
     color: #ffcc33;
 }

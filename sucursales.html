@@ -25,7 +25,7 @@
                 <li><a href="empleado.html">Empleado</a></li>
                 <li><a href="productos.html">Menú</a></li>
                 <li><a href="ingredientes.html">Ingredientes</a></li>
-                <li><a href="sucursales.html">Sucursales</a></li>
+                <li><a class="selected" href="sucursales.html">Sucursales</a></li>
                 <li><a href="promociones.html">Promociones</a></li>
                 <li><a href="evento.html">Eventos</a></li>
             </ul>
@@ -36,7 +36,7 @@
         <section class="welcome">
             <p>Portal de Sucursales</p>
         </section>
-        <form class="grid_form" action="">
+        <form class="grid_form" action="post">
             <div>
                 <label for="nombre_sucursal">Nombre:</label>
                 <input type="text" name="nombre_sucursal" id="nombre_sucursal">
@@ -46,14 +46,17 @@
                 <input type="tel" name="tel_sucursal" id="tel_sucursal">
             </div>
             <div>
-                <label for="gerente_sucursal">DNI Gerente*:</label>
-                <input type="text" name="gerente_sucursal" id="gerente_sucursal">
+                <label for="gerente_sucursal">DNI Gerente:</label>
+                <input type="text" name="gerente_sucursal" id="gerente_sucursal" required>*
             </div>
             <div>
                 <label for="dir_sucursal">Dirección:</label>
                 <input type="text" name="dir_sucursal" id="dir_sucursal">
             </div>
             <div id="map"></div>
+            <div>
+                <input style="width: 100%;" type="submit" value="Enviar">
+            </div>
         </form>
     </main>
 
