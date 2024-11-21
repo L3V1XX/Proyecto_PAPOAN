@@ -34,8 +34,28 @@
 
     <main class="contenido">
         <section class="welcome">
-            <h1>Bienvenido a Restaurante - Papoan</h1>
+            <h1>¿Quieres introducir nuevos ingredientes?</h1>
+            <p>¡No te preocupes! ¡Estamos aquí para ayudarte!</p>
         </section>
+        <form method="post">
+            <label for="nombre_ingrediente">Nombre:</label>
+            <input type="text" id="nombre_ingrediente" name="nombre_ingrediente">
+            <br>
+            <label for="caducidad">Fecha de Caducidad:</label>
+            <input type="date" id="caducidad" name="caducidad">
+            <br>
+            <label for="almacen">Almacen:</label>
+            <input type="number" id="almacen" name="almacen">
+            <br>
+            <label for="cantidad">Cantidad:</label>
+            <input type="number" name="cantidad" id="cantidad">
+            <br>
+            <label for="fecha">Fecha:</label>
+            <input type="date" name="fecha" id="fecha">
+
+            <label for="guardardel">Guardar Ingredientes</label>
+            <input type="submit">
+        </form>
     </main>
 
     <footer>
