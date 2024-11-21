@@ -34,7 +34,56 @@
 
     <main class="contenido">
         <section class="welcome">
-            <p>Portal del Empleado.</p>
+            <h1 style="margin-bottom: 5%;">Portal del Empleado.</h1>
+            <form class="grid_form" method="post">
+                <div>
+                    <label for="dni_empleado">DNI:</label>
+                    <input type="text" name="dni_empleado" id="dni_empleado" minlength="9" maxlength="9" required>
+                    <sup><b>*</b></sup>
+                </div>
+                <div>
+                    <label for="sucursal_empleado">Sucursal:</label>
+                    <select name="sucursal_empleado" id="sucursal_empleado" required>
+                        <option value="sucursal1">Sucursal1</option>
+                        <option value="sucursal2">Sucursal2</option>
+                        <option value="sucursal3">Sucursal3</option>
+                    </select>
+                    <sup><b>*</b></sup>
+                </div>
+                <div>
+                    <label for="nombre_empleado">Nombre:</label>
+                    <input type="text" name="nombre_empleado" id="nombre_empleado">
+                </div>
+                <div>
+                    <label for="apellido_empleado">Apellidos:</label>
+                    <input type="text" name="apellido_empleado" id="apellido_empleado">
+                </div>
+                <div style="grid-column: 2/4;">
+                    <label for="fechanac_empleado">Fecha de Nacimiento:</label>
+                    <input type="date" name="fechanac_empleado" id="fechanac_empleado">
+                </div>
+                <div>
+                    <label for="genero_empleado">Género:</label>
+                    <select name="genero_empleado" id="genero_empleado">
+                        <option value="masculino">Masculino</option>
+                        <option value="femenino">Femenino</option>
+                        <option value="otros">Otros</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="rol_empleado">Rol:</label>
+                    <input list="roles_empleados" onchange="rolEmpleado('da')" name="rol_empleado" id="rol_empleado">
+                    <datalist id="roles_empleados">
+                        <option value="Cocinero"></option>
+                        <option value="Dependiente"></option>
+                    </datalist>
+                </div>
+                <div style="grid-row: 4/5; margin-top: 5%;" id="variable_rol">
+                </div>
+                <div style="grid-row: 5/6;">
+                    <input style="width: 100%;" type="submit" value="Enviar">
+                </div>
+            </form>
         </section>
     </main>
 
@@ -43,5 +92,5 @@
         <p><a href="https://www.restaurantepapoan.com/privacy-policy" target="_blank">Política de Privacidad</a> | <a href="https://www.restaurantepapoan.com/terms" target="_blank">Términos y Condiciones</a></p>
     </footer>
 </body>
-
+<script src="./app.js"></script>
 </html>
