@@ -33,23 +33,27 @@
     </header>
 
     <main class="producto">
+        <h1>Añadir nuevo producto</h1>
         <section>
-            <h1>Añadir nuevo producto</h1>
             <div>
-                <form action="" method="get">
+                <form action="" method="post">
                     <label for="NommbrePro">Nombre:</label>
-                    <input type="text" maxlength="30" required>
+                    <input type="text" name="NommbrePro" maxlength="30" required autofocus size="30">
+                    <sup>*</sup>
                     <label for="PrecioPro">Precio:</label>
-                    <input type="number" step="0.01" min="0.01" max="1000.00" placeholder="2,5€">
+                    <input type="number" name="PrecioPro" step="0.01" min="0.01" max="1000.00" placeholder="2,5€" required>
+                    <sup>*</sup>
                     <br>
-                    <label for="NommbrePro">Descripcion:</label>
-                    <textarea maxlength="200" rows="5" cols="40" placeholder="Descripcion del producto"></textarea>
+                    <strong><label for="NommbrePro">Descripcion:</label></strong>
+                    <br>
+                    <textarea maxlength="200" rows="4" cols="70" placeholder="Descripcion del producto"></textarea>
                     <label for="IdentificaionPro">ID:</label>
-                    <input type="number" placeholder="123456789" required>
+                    <input type="number" name="IdentificaionPro" placeholder="0123456789" required>
+                    <sup>*</sup>
                     <br>
                     <div style="text-align: right;">
-                        <input type="submit">
-                        <input type="reset" value="Reset">
+                        <input type="submit" value="Enviar">
+                        <input type="reset" value="Resetear">
                     </div>
                 </form>
             </div>
@@ -59,33 +63,30 @@
 <main class="cartaProductos">
     <h1>Carta</h1>
     <section>
-        <div class="imagenesPatata">
-            <img src="img/img_Patatas/patata2.jpg" alt="Patata1">
-            <img src="img/img_Patatas/patata1.jpg" alt="Patata2">
-            <img src="img/img_Patatas/patata3.jpg" alt="Patata3">
-            <img src="img/img_Patatas/patata4.jpg" alt="Patata4">
-            <img src="img/img_Patatas/patata5.jpg" alt="Patata5">
-            <img src="img/img_Patatas/patata6.jpg" alt="Patata6">
-            <img src="img/img_Patatas/patata7.jpg" alt="Patata7">
-            <img src="img/img_Patatas/patata8.jpg" alt="Patata8">
-            <img src="img/img_Patatas/patata9.jpg" alt="Patata9">
-            <img src="img/img_Patatas/patata10.jpg" alt="Patata10">
-            <img src="img/img_Patatas/patata11.jpg" alt="Patata11">
-            <img src="img/img_Patatas/patata12.jpg" alt="Patata12">
-            <img src="img/img_Patatas/patata13.jpg" alt="Patata13">
-            <img src="img/img_Patatas/patata14.jpg" alt="Patata14">
-            <img src="img/img_Patatas/patata15.jpg" alt="Patata15">
-            <img src="img/img_Patatas/patata16.jpg" alt="Patata16">
+        <div">
+            <img src="img/img_Patatas/patata2.jpg" alt="Patata1" title="Tarta de patata">
+            <img src="img/img_Patatas/patata1.jpg" alt="Patata2" title="Patata con salmon">
+            <img src="img/img_Patatas/patata3.jpg" alt="Patata3" title="Ensalada de patatas">
+            <img src="img/img_Patatas/patata4.jpg" alt="Patata4" title="Churos de patatas">
+            <img src="img/img_Patatas/patata5.jpg" alt="Patata5" title="Patatas rusas">
+            <img src="img/img_Patatas/patata6.jpg" alt="Patata6" title="Patatas a la sarten">
+            <img src="img/img_Patatas/patata7.jpg" alt="Patata7" title="Pure de patatas">
+            <img src="img/img_Patatas/patata8.jpg" alt="Patata8" title="Patatas gratinadas">
+            <img src="img/img_Patatas/patata9.jpg" alt="Patata9" title="Tortilla de patatas">
+            <img src="img/img_Patatas/patata10.jpg" alt="Patata10" title="Ñoquis de patata">
+            <img src="img/img_Patatas/patata11.jpg" alt="Patata11" title="Palito de patata">
+            <img src="img/img_Patatas/patata12.jpg" alt="Patata12" title="Patatas de bolsa">
+            <img src="img/img_Patatas/patata13.jpg" alt="Patata13" title="Patatas felices">
+            <img src="img/img_Patatas/patata14.jpg" alt="Patata14" title="Patatas a la gallega">
+            <img src="img/img_Patatas/patata15.jpg" alt="Patata15" title="Trazas de patata">
+            <img src="img/img_Patatas/patata16.jpg" alt="Patata16" title="Patatas guisadas">
         </div>
     </section>
 </main>
-
-
 
     <footer>
         <p>Copyright © 2024 Restaurante - Papoan. Todos los derechos reservados.</p>
         <p><a href="https://www.restaurantepapoan.com/privacy-policy" target="_blank">Política de Privacidad</a> | <a href="https://www.restaurantepapoan.com/terms" target="_blank">Términos y Condiciones</a></p>
     </footer>
 </body>
-
 </html>
