@@ -38,22 +38,22 @@
             <div>
                 <form action="" method="post">
                     <label for="NommbrePro">Nombre:</label>
-                    <input type="text" name="NommbrePro" maxlength="30" required autofocus size="30">
+                    <input type="text" id="NommbrePro" name="NommbrePro" maxlength="30" required autofocus size="30">
                     <sup>*</sup>
                     <label for="PrecioPro">Precio:</label>
-                    <input type="number" name="PrecioPro" step="0.01" min="0.01" max="1000.00" placeholder="2,5€" required>
+                    <input type="number" id="PrecioPro" name="PrecioPro" step="any" min="0.00" max="100.00" placeholder="2,5€" required>
                     <sup>*</sup>
                     <br>
-                    <strong><label for="NommbrePro">Descripcion:</label></strong>
+                    <strong><label for="DescripcionPro">Descripcion:</label></strong>
                     <br>
-                    <textarea maxlength="200" rows="4" cols="70" placeholder="Descripcion del producto"></textarea>
+                    <textarea id="DescripcionPro" maxlength="200" rows="4" cols="70" placeholder="Descripcion del producto"></textarea>
                     <label for="IdentificaionPro">ID:</label>
-                    <input type="number" name="IdentificaionPro" placeholder="0123456789" required>
+                    <input type="number" id="IdentificaionPro" name="IdentificaionPro" placeholder="0123456789" required>
                     <sup>*</sup>
                     <br>
                     <div style="text-align: right;">
                         <input type="submit" value="Enviar">
-                        <input type="reset" value="Resetear">
+                        <input type="reset" value="Borrar">
                     </div>
                 </form>
             </div>
