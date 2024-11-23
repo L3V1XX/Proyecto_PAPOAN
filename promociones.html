@@ -35,31 +35,28 @@
     <main class="promo">
         <h1>Promociones</h1>
         <section>
-            <form>
+            <form action="" method="post">
                 <label for="IdentificacionPromo">ID</label>
-                <input type="number" name="IdentificacionPromo" placeholder="0123456789" required autofocus>
+                <input type="number" id="IdentificacionPromo" name="IdentificacionPromo" placeholder="0123456789" required autofocus>
                 <sup>*</sup>
                 <br>
-                <label for="NombrePromo">Nombre:</label>
-                <input type="text" name="NombrePromo" placeholder="2X1 en patatas" maxlength="20" size="20">
-                <br>
                 <label for="FInicio">Fecha Inicio</label>
-                <input type="date" name="FInicio">
+                <input type="date" id="FInicio" name="FInicio" required>
+                <sup>*</sup>
                 <br>
                 <label for="FFin">Fecha Fin</label>
-                <input type="date" name="FFin">
+                <input type="date" id="FFin" name="FFin">
                 <br>
                 <label for="Sucursal">Sucursal</label>
-                <input type="number" name="Sucursal" placeholder="0123456789" required>
+                <input type="number" id="Sucursal" name="Sucursal" placeholder="0123456789" required>
                 <sup>*</sup>
                 <br><br>
                 <label for="descripcionPromo">Descripcion:</label>
                 <br>
-                <textarea maxlength="200" rows="4" cols="70" placeholder="Descripcion de la promocion"></textarea>
-                <br>
+                <textarea id="descripcionPromo" maxlength="200" rows="4" cols="70" placeholder="Descripcion de la promocion"></textarea>
                 <div>
                     <input type="submit" value="Enviar">
-                    <input type="reset" value="Resetear">
+                    <input type="reset" value="Borrar">
                 </div>
             </form>
         </section>
