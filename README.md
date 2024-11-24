@@ -1,7 +1,7 @@
 # Nombre de los Integrantes
-# Jose Manuel Payán Gordillo
-# Pablo Plazuelo Jimenez
-# Adrian Marquez Bellido
+## Jose Manuel Payán Gordillo
+## Pablo Plazuelo Jimenez
+## Adrian Marquez Bellido
 
 # Proyecto Papoan
 
