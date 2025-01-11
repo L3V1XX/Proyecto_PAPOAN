@@ -7,7 +7,6 @@
 
 ## Descripción del Proyecto 📋  
 Papoan es una aplicación web diseñada para mejorar la experiencia de los usuarios en su interacción con restaurantes. A través de esta plataforma, los usuarios pueden:  
-- **📝 Registrarse y acceder a una cuenta personalizada.**  
 - **🍔 Explorar información detallada sobre los productos disponibles.**  
 - **🏠 Consultar datos relevantes sobre los restaurantes asociados.**  
 - **🥬 Descubrir ingredientes específicos que se encuentran a la venta.**  
