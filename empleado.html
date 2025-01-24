@@ -72,13 +72,25 @@
                 </div>
                 <div>
                     <label for="rol_empleado">Rol:</label>
-                    <input list="roles_empleados" onchange="rolEmpleado('da')" name="rol_empleado" id="rol_empleado">
-                    <datalist id="roles_empleados">
-                        <option value="Cocinero"></option>
-                        <option value="Dependiente"></option>
-                    </datalist>
+
+                    <select name="rol_empleado" id="rol_empleado" onchange="rolEmpleado()">
+                        <option selected value="Cocinero">Cocinero</option>
+                        <option value="Dependiente">Dependiente</option>
+                    </select>
+
                 </div>
                 <div style="grid-row: 4/5; margin-top: 5%;" id="variable_rol">
+                    <div>
+                        <label for="especialidad_cocinero"> Especialidad:</label>
+                        <select name="especialidad_cocinero" id="especialidad_cocinero">
+                            <option value="producto1">Producto1</option>
+                            <option value="producto2">Producto2</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="jefe_cocinero">Cocinero jefe:</label>
+                        <input type="checkbox" name="jefe_cocinero" id="jefe_cocinero">
+                    </div>
                 </div>
                 <div style="grid-row: 5/6;">
                     <input style="width: 100%;" type="submit" value="Enviar">
@@ -89,8 +101,10 @@
 
     <footer>
         <p>Copyright © 2024 Restaurante - Papoan. Todos los derechos reservados.</p>
-        <p><a href="https://www.restaurantepapoan.com/privacy-policy" target="_blank">Política de Privacidad</a> | <a href="https://www.restaurantepapoan.com/terms" target="_blank">Términos y Condiciones</a></p>
+        <p><a href="https://www.restaurantepapoan.com/privacy-policy" target="_blank">Política de Privacidad</a> | <a
+                href="https://www.restaurantepapoan.com/terms" target="_blank">Términos y Condiciones</a></p>
     </footer>
 </body>
 <script src="./app.js"></script>
+
 </html>
