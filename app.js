@@ -13,4 +13,4 @@ function rolEmpleado() {
 function toggleMenu() {
     const menu = document.querySelector('.nav-links');
     menu.style.display = menu.style.display === 'flex' ? '' : 'flex';
-}
+};
