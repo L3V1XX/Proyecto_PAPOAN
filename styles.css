@@ -432,10 +432,19 @@ footer a:hover {
     border-radius: 10px;
 }
 
+.menu-icon {
+    display: none;
+    font-size: xx-large;
+}
+
 /* Responsive media queries */
 @media (max-width: 1200px) {
     section {
         padding: 2rem 1rem;
+    }
+
+    .nav-links {
+        display: flex;
     }
 
     .contenido {
@@ -459,9 +468,14 @@ footer a:hover {
         display: block;
     }
 
+    .menu-icon {
+        display: flex;
+    }
+
     .nav-links {
         display: none;
         flex-direction: column;
+        text-align: center;
         gap: 10px;
         background: #c94747;
         padding: 10px;
