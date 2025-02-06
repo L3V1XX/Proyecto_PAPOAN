@@ -7,9 +7,12 @@ function rolEmpleado() {
     } else if(rol == "Dependiente") {
         div.innerHTML = '<label for="color_dependiente">Color:</label><select name="color_dependiente" id="color_dependiente"><option value="rojo">Rojo</option><option value="negro">Negro</option><option value="amarillo">Amarillo</option></select>';
     }
+  
 }
 
 function toggleMenu() {
     const menu = document.querySelector('.nav-links');
     menu.style.display = menu.style.display === 'flex' ? '' : 'flex';
 }
+=======
+};
