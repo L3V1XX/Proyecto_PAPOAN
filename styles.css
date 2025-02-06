@@ -332,10 +332,6 @@ textarea.producto {
     text-align: left;
 }
 
-.producto sup{
-    color: red;
-}
-
 .cartaProductos{
     padding: 20px;
     margin: 1rem auto;
@@ -370,10 +366,6 @@ textarea.producto {
 
 .promo h1{
     text-align: left;
-}
-
-.promo sup{
-    color: red;
 }
 
 .promo form{

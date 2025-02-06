@@ -39,24 +39,22 @@
             <p>¡No te preocupes! ¡Estamos aquí para ayudarte!</p>
         </section>
         <form method="post">
-            <label for="nombre_ingrediente">Nombre:</label>
+            <label for="nombre_ingrediente">Nombre <sup style="color: red;">*</sup></label>
             <input type="text" id="nombre_ingrediente" name="nombre_ingrediente" required>
-            <sup style="color: red;">*</sup>
+            
             <br>
             <label for="caducidad">Fecha de Caducidad:</label>
             <input type="date" id="caducidad" name="caducidad">
             <br>
-            <label for="almacen">Almacen:</label>
+            <label for="almacen">Almacen <sup style="color: red;">*</sup></label>
             <input type="number" id="almacen" name="almacen" required>
-            <sup style="color: red;">*</sup>
             <br>
             <label for="cantidad">Cantidad:</label>
             <input type="number" name="cantidad" id="cantidad">
             <br>
-            <label for="fecha_ingre">Fecha:</label>
-            <input type="date" name="fecha" id="fecha" required> 
-            <sup style="color: red;">*</sup>
-
+            <label for="fecha_ingre">Fecha <sup style="color: red;">*</sup></label>
+            <input type="date" name="fecha" id="fecha" required>
+            <br><br>
             <label for="guardar_ingre">Guardar Ingredientes</label>
             <input type="submit">
         </form>
