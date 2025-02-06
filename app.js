@@ -10,6 +10,7 @@ function rolEmpleado() {
   
 }
 
+/* Con esto podemos hacer el toggle del menu */
 function toggleMenu() {
     const menu = document.querySelector('.nav-links');
     menu.style.display = menu.style.display === 'flex' ? '' : 'flex';
