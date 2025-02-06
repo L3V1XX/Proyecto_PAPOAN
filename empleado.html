@@ -38,33 +38,32 @@
             <h1 style="margin-bottom: 5%;">Portal del Empleado.</h1>
             <form class="grid_form" method="post">
                 <div>
-                    <label for="dni_empleado">DNI:</label>
+                    <label for="dni_empleado">DNI<sup style="color: red;"><b>*</b></sup></label>
                     <input type="text" name="dni_empleado" id="dni_empleado" minlength="9" maxlength="9" required>
-                    <sup><b>*</b></sup>
+                    
                 </div>
                 <div>
-                    <label for="sucursal_empleado">Sucursal:</label>
+                    <label for="sucursal_empleado">Sucursal<sup style="color: red;"><b>*</b></sup></label>
                     <select name="sucursal_empleado" id="sucursal_empleado" required>
                         <option value="sucursal1">Sucursal1</option>
                         <option value="sucursal2">Sucursal2</option>
                         <option value="sucursal3">Sucursal3</option>
                     </select>
-                    <sup><b>*</b></sup>
                 </div>
                 <div>
-                    <label for="nombre_empleado">Nombre:</label>
+                    <label for="nombre_empleado">Nombre</label>
                     <input type="text" name="nombre_empleado" id="nombre_empleado">
                 </div>
                 <div>
-                    <label for="apellido_empleado">Apellidos:</label>
+                    <label for="apellido_empleado">Apellidos</label>
                     <input type="text" name="apellido_empleado" id="apellido_empleado">
                 </div>
                 <div style="grid-column: 2/4;">
-                    <label for="fechanac_empleado">Fecha de Nacimiento:</label>
+                    <label for="fechanac_empleado">Fecha de Nacimiento</label>
                     <input type="date" name="fechanac_empleado" id="fechanac_empleado">
                 </div>
                 <div>
-                    <label for="genero_empleado">Género:</label>
+                    <label for="genero_empleado">Género</label>
                     <select name="genero_empleado" id="genero_empleado">
                         <option value="masculino">Masculino</option>
                         <option value="femenino">Femenino</option>
@@ -72,7 +71,7 @@
                     </select>
                 </div>
                 <div>
-                    <label for="rol_empleado">Rol:</label>
+                    <label for="rol_empleado">Rol</label>
 
                     <select name="rol_empleado" id="rol_empleado" onchange="rolEmpleado()">
                         <option selected value="Cocinero">Cocinero</option>
@@ -82,14 +81,14 @@
                 </div>
                 <div style="grid-row: 4/5; margin-top: 5%;" id="variable_rol">
                     <div>
-                        <label for="especialidad_cocinero"> Especialidad:</label>
+                        <label for="especialidad_cocinero"> Especialidad</label>
                         <select name="especialidad_cocinero" id="especialidad_cocinero">
                             <option value="producto1">Producto1</option>
                             <option value="producto2">Producto2</option>
                         </select>
                     </div>
                     <div>
-                        <label for="jefe_cocinero">Cocinero jefe:</label>
+                        <label for="jefe_cocinero">Cocinero jefe</label>
                         <input type="checkbox" name="jefe_cocinero" id="jefe_cocinero">
                     </div>
                 </div>
