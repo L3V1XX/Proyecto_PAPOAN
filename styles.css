@@ -539,15 +539,52 @@ footer a:hover {
     border-radius: 10px;
 }
 
+.menu-icon {
+    display: none;
+    font-size: xx-large;
+}
+
+/* Responsive media queries */
+@media (max-width: 1200px) {
+    section {
+        padding: 2rem 1rem;
+    }
+
+    .nav-links {
+        display: flex;
+    }
+
+    .contenido {
+        padding: 2rem 1rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .miembro_equipo {
+        width: calc(50% - 20px);
+    }
+}
+
+=======
 /* Media Queries */
 @media (max-width: 768px) {
     .nav-toggle {
         display: block;
     }
 
+    .menu-icon {
+        display: flex;
+    }
+
     .nav-links {
         display: none;
         flex-direction: column;
+        text-align: center;
         gap: 10px;
         background: var(--color-primary);
         padding: 10px;
