@@ -13,6 +13,9 @@ function rolEmpleado() {
   
 }
 
+
+/* Selección del radio button de evento para que salga el correspondiente label */
+
 function tipoEvento() {
     let evento;
     document.getElementsByName("evento").forEach((item) => {
