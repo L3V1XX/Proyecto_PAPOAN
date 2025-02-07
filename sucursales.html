@@ -38,27 +38,24 @@
             <h1 style="margin-bottom: 5%;">Portal de Sucursales</h1>
             <form class="grid_form" method="post">
                 <div>
-                    <label for="nombre_sucursal">Nombre</label>
-                    <input type="text" name="nombre_sucursal" id="nombre_sucursal">
+                    <label for="nombre_sucursal">Nombre:</label>
+                    <input type="text" name="nombre_sucursal" id="nombre_sucursal" autofocus>
                 </div>
                 <div>
                     <label for="tel_sucursal">Teléfono</label>
                     <input type="tel" name="tel_sucursal" id="tel_sucursal">
                 </div>
                 <div>
-                    <label for="gerente_sucursal">Gerente<sup style="color: red;">*</sup></label>
+                    <label for="gerente_sucursal">Gerente</label><sup>*</sup>
                     <input type="text" name="gerente_sucursal" id="gerente_sucursal" minlength="9" maxlength="9" required>
-                    
                 </div>
                 <div class="direccion">
                     <label for="dir_sucursal">Dirección</label>
                     <input placeholder="Av. de la Libertad, 11, Dos Hermanas, Sevilla" style="width: 100%;" type="text" name="dir_sucursal" id="dir_sucursal">
                 </div>
-                <div style="grid-row: 3/5;">
-                    <input style="width: 100%;" type="submit" value="Enviar">
-                </div>
-                <div style="grid-row: 3/5; margin-left: 1%;">
-                    <input style="width: 100%;" type="reset" value="Borrar">
+                <div class="buttons">
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Borrar">
                 </div>
             </form>
         </section>
