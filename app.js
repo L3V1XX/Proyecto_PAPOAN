@@ -1,3 +1,6 @@
+'use strict';
+
+/* Selección del radio button de rol para que salga el correspondiente label */
 function rolEmpleado() {
     let rol = document.getElementById("rol_empleado").value;
     let cocinero = document.getElementById("Cocinero");
@@ -10,9 +13,7 @@ function rolEmpleado() {
         dependiente.style = "";
         cocinero.style = "display: none;"
     }
-  
 }
-
 
 /* Selección del radio button de evento para que salga el correspondiente label */
 function tipoEvento() {
