@@ -1,13 +1,43 @@
 function rolEmpleado() {
     let rol = document.getElementById("rol_empleado").value;
-    let div = document.getElementById("variable_rol");
+    let cocinero = document.getElementById("Cocinero");
+    let dependiente = document.getElementById("Dependiente");
     
     if (rol == "Cocinero") {
-        div.innerHTML = '<div><label for= "especialidad_cocinero" > Especialidad:</label ><select name="especialidad_cocinero" id="especialidad_cocinero"><option value="producto1">Producto1</option><option value="producto2">Producto2</option></select></div ><div><label for="jefe_cocinero">Cocinero jefe:</label><input type="checkbox" name="jefe_cocinero" id="jefe_cocinero"></div>';
+        cocinero.style = ""
+        dependiente.style = "display: none;"
     } else if(rol == "Dependiente") {
-        div.innerHTML = '<label for="color_dependiente">Color:</label><select name="color_dependiente" id="color_dependiente"><option value="rojo">Rojo</option><option value="negro">Negro</option><option value="amarillo">Amarillo</option></select>';
+        dependiente.style = "";
+        cocinero.style = "display: none;"
     }
   
+}
+
+function tipoEvento() {
+    let evento;
+    document.getElementsByName("evento").forEach((item) => {
+        if(item.checked) {
+            evento = item.value;
+        }
+    });
+    
+    let boda = document.getElementById("comida_boda");
+    let empresa = document.getElementById("cena_empresa");
+    let cumple = document.getElementById("cumple");
+
+    if (evento == "boda") {
+        boda.style = "";
+        empresa.style = "display: none;"
+        cumple.style = "display: none;"
+    } else if(evento == "empresa") {
+        empresa.style = "";
+        boda.style = "display: none;"
+        cumple.style = "display: none;"
+    }  else if(evento == "cumpleaños") {
+        cumple.style = "";
+        boda.style = "display: none;"
+        empresa.style = "display: none;"
+    }  
 }
 
 /* Con esto podemos hacer el toggle del menu */
