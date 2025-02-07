@@ -38,12 +38,11 @@
             <h1 style="margin-bottom: 5%;">Portal del Empleado.</h1>
             <form class="grid_form" method="post">
                 <div>
-                    <label for="dni_empleado">DNI<sup style="color: red;"><b>*</b></sup></label>
-                    <input type="text" name="dni_empleado" id="dni_empleado" minlength="9" maxlength="9" required>
-                    
+                    <label for="dni_empleado">DNI</label><sup>*</sup>
+                    <input type="text" name="dni_empleado" id="dni_empleado" minlength="9" maxlength="9" autofocus required>
                 </div>
                 <div>
-                    <label for="sucursal_empleado">Sucursal<sup style="color: red;"><b>*</b></sup></label>
+                    <label for="sucursal_empleado">Sucursal</label><sup>*</sup>
                     <select name="sucursal_empleado" id="sucursal_empleado" required>
                         <option value="sucursal1">Sucursal1</option>
                         <option value="sucursal2">Sucursal2</option>
@@ -92,8 +91,9 @@
                         <input type="checkbox" name="jefe_cocinero" id="jefe_cocinero">
                     </div>
                 </div>
-                <div style="grid-row: 5/6;">
-                    <input style="width: 100%;" type="submit" value="Enviar">
+                <div class="buttons">
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Borrar">
                 </div>
             </form>
         </section>
