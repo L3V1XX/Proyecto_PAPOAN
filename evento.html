@@ -45,31 +45,37 @@
                     <input type="number" name="sucursal" id="sucursal" required placeholder="ID de la sucursal">
 
                     <label class="evento">Tipo de Evento</label><sup>*</sup>
-                    <div class="radios">
+                    <div class="tipoEvento">
                         <div>
-                            <input type="radio" name="evento" value="boda" id="boda" required>
+                            <input type="radio" name="evento" value="boda" id="boda" onchange="tipoEvento()" required>
                             <label for="boda">Boda</label>
                         </div>
 
                         <div>
-                            <input type="radio" name="evento" value="empresa" id="empresa">
+                            <input type="radio" name="evento" value="empresa" id="empresa" onchange="tipoEvento()" required>
                             <label for="empresa">Cena de Empresa</label>
                         </div>
 
                         <div>
-                            <input type="radio" name="evento" value="cumpleaños" id="cumpleaños">
+                            <input type="radio" name="evento" value="cumpleaños" id="cumpleaños" onchange="tipoEvento()" required>
                             <label for="cumpleaños">Cumpleaños</label>
                         </div>
                     </div>
                     
-                    <label for="asistentes">Nº Asistentes:</label>
-                    <input type="number" name="asistentes" id="asistentes">
+                    <div id="comida_boda" style="display: none;">
+                        <label for="asistentes">Nº Asistentes:</label>
+                        <input type="number" name="asistentes" id="asistentes">
+                    </div>
 
-                    <label for="nombre_empresa">Nombre Empresa:</label>
-                    <input type="text" name="nombre_empresa" id="nombre_empresa">
+                    <div id="cena_empresa" style="display: none;">
+                        <label for="nombre_empresa">Nombre Empresa:</label>
+                        <input type="text" name="nombre_empresa" id="nombre_empresa">
+                    </div>
 
-                    <label for="cumpleañeros">Nombre del Cumpleañero:</label>
-                    <input type="text" name="cumpleañeros" id="cumpleañeros">
+                    <div id="cumple" style="display: none;">
+                        <label for="cumpleañeros">Nombre del Cumpleañero:</label>
+                        <input type="text" name="cumpleañeros" id="cumpleañeros">
+                    </div>
 
                     <label for="fecha_evento">Fecha:</label>
                     <input type="date" name="fecha" id="fecha">
