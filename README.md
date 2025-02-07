@@ -14,3 +14,9 @@ Papoan es una aplicación web diseñada para mejorar la experiencia de los usuar
 - **🎉 Estar al día con eventos organizados para los clientes.**  
 
 🎯 **Objetivo:** Conectar a los restaurantes con sus clientes de manera más efectiva, proporcionando una experiencia intuitiva, informativa y atractiva.  
+
+
+## 📝 Tecnologías Utilizadas 📝
+- HTML, CSS y JavaScript
+- Git
+- GitHub
