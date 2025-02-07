@@ -169,11 +169,12 @@ input[type="reset"]:hover {
 }
 
 /* Contenido principal */
-.contenido h1, .promo h1, .producto h1 {
+.contenido h1, .promo h1, .producto h1, h2 {
     text-align: center;
     font-size: 2rem;
     color: #333;
 }
+
 
 .contenido p, .sobre_nosotros p, .miembro_equipo p {
     text-align: center;
@@ -311,6 +312,8 @@ footer a:hover {
 .radios {
     display: flex;
     gap: 5%;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .buttons {
