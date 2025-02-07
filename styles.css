@@ -17,32 +17,88 @@ body {
     font-size: 16px;
 }
 
-/* Estructura general */
-section {
+section, .container {
     padding: 3rem 1rem;
     margin: auto;
     max-width: 1200px;
-    text-align: center;
 }
 
 .container {
-    padding: 0 1rem;
     width: 100%;
-    max-width: 1200px;
-    margin: auto;
 }
 
-/*Formularios*/
-.grid_form {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-row-gap: 7%;
+/* Formularios */
+form, .formulario, .contenido, .promo {
+    max-width: 900px;
+    margin: 1rem auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-/*Direccion sucursal*/
-.direccion {
-    grid-column: 1 / span 2; 
-    display: flex; 
-    gap: 1%;
+
+.grid_form, .formulario, .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="date"],
+input[type="text"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"] {
+    background-color: #fecc3c;
+    color: black;
+}
+
+input[type="submit"]:hover {
+    background-color: #FFA500;
+}
+
+input[type="reset"] {
+    background-color: #ef0f0f;
+    color: #fff;
+    margin-left: 10px;
+}
+
+input[type="reset"]:hover {
+    background-color: #ef0f0f;
+}
+
+::placeholder {
+    color: #999;
+    font-size: 13px;
 }
 
 /* Navbar */
@@ -83,7 +139,6 @@ section {
     transition: color 0.3s ease;
 }
 
-/*Elemento del menú seleccionado*/
 .nav-links .selected {
     color: #f3c848;
 }
@@ -114,276 +169,44 @@ section {
 }
 
 /* Contenido principal */
-.contenido {
-    padding: 2rem;
-    margin: 1rem auto;
-    max-width: 900px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/*Formulario Eventos*/
-.formulario {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.form-group {
-    display: flex;
-    padding: 10px;
-    flex-direction: column;
+.contenido h1, .promo h1, .producto h1 {
     text-align: center;
-    align-items: center;
+    font-size: 2rem;
+    color: #333;
 }
 
-.form-group input[type="text"],
-.form-group input[type="number"],
-.form-group input[type="date"] {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 14px;
-}
-
-.radios {
-    display: flex;
-    gap: 10px;
+.contenido p, .sobre_nosotros p, .miembro_equipo p {
     text-align: center;
-    align-self: center;
+    font-size: 1.1rem;
+    color: #777;
 }
 
-/* Estilo para el menu */
-.nombre-menu{
-    font-size: 1.0rem;
-    color: #333;
-    margin-bottom: 1rem;
-    text-align: left;
-    font-weight: bold;
-    padding-left: 10px;
+.productos-img {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 
-/* Estilos para la sección de productos */
-.producto {
-    font-size: 1.0rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem 1rem;
-    background-color: #f8f8f8;
-    border-radius: 8px;
-    margin: 2rem 0;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Estilos generales para los formularios */
-form {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Estilos para los labels */
-label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 600;
-    color: #333;
-    font-size: 14px;
-}
-
-/* Estilos para los inputs */
-input[type="text"],
-input[type="number"],
-textarea {
+.productos-img img {
+    padding: 10px;
     width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 14px;
-    color: #333;
-    background-color: #fff;
-    transition: border-color 0.3s ease;
-}
-
-input[type="text"]:focus,
-input[type="number"]:focus,
-textarea:focus {
-    border-color: #007BFF;
-    outline: none;
-}
-
-/* Estilos para los botones */
-input[type="submit"],
-input[type="reset"] {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    font-size: 14px;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
-}
-
-input[type="submit"] {
-    background-color: #fecc3c;
-    color: #fff;
-    color: black;
-}
-
-input[type="submit"]:hover {
-    background-color: #FFA500;
-}
-
-input[type="reset"] {
-    background-color: #ef0f0f;
-    color: #fff;
-    margin-left: 10px;
-}
-
-input[type="reset"]:hover {
-    background-color: #ef0f0f;
-}
-
-/* Estilos para el texto de los placeholders */
-::placeholder {
-    color: #999;
-    font-size: 13px;
-}
-
-/* Estilos para el textarea */
-textarea.producto {
-    resize: vertical;
-    min-height: 100px;
-}
-
-/* Estilos para la sección de la carta de productos */
-.cartaProductos {
-    margin-top: 40px;
-}
-
-.cartaProductos h1 {
-    text-align: center;
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.cartaProductos div {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-}
-
-.cartaProductos img {
-    width: 150px;
-    height: 150px;
+    height: 100%;
     border-radius: 8px;
     object-fit: cover;
     transition: transform 0.3s ease;
 }
 
-.cartaProductos img:hover {
+.productos-img img:hover {
     transform: scale(1.05);
 }
 
-
-/* Formulario Eventos */
-.formulario {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.submit-container {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.contenido h1 {
-    font-size: 2rem;
-    color: #333;
-}
-
-.contenido p {
-    font-size: 1.1rem;
-}
-
-/*Formulario de Productos */
-.producto {
-    padding: 10px;
-    margin: 1rem auto;
-    max-width: 900px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.producto h1{
+.promo form, .producto form {
     text-align: left;
 }
 
-.producto form{
-    text-align: left;
-}
-
-.producto sup{
+sup {
     color: red;
+    font-weight: bold;
 }
-
-.cartaProductos{
-    padding: 20px;
-    margin: 1rem auto;
-    max-width: 900px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.cartaProductos h1{
-    text-align: left;
-}
-
-.cartaProductos img{
-    padding: 10px;
-    width: 30%;
-    height: 30%;
-}
-
-/* Formulario de Promociones */
-
-.promo {
-    padding: 10px;
-    margin: 1rem auto;
-    max-width: 900px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: left;
-}
-
-.promo h1{
-    text-align: left;
-}
-
-.promo sup{
-    color: red;
-}
-
-.promo form{
-    text-align: left;
-}
-
-.promo div{
-    text-align: right;
-}
-
 
 /* Estilo para la sección "Sobre Nosotros" */
 .sobre_nosotros {
@@ -393,12 +216,6 @@ textarea.producto {
 
 .sobre_nosotros h2 {
     font-size: 2rem;
-}
-
-.sobre_nosotros p {
-    font-size: 1.2rem;
-    color: #666;
-    margin-bottom: 2rem;
 }
 
 .equipo {
@@ -438,11 +255,6 @@ textarea.producto {
     margin-bottom: 0.5rem;
 }
 
-.miembro_equipo p {
-    font-size: 1rem;
-    color: #777;
-}
-
 /* Footer */
 footer {
     background-color: #333;
@@ -461,17 +273,13 @@ footer p {
     margin: 0;
     line-height: 1.5;
     font-weight: 500;
-    font-size: 1rem;
-    text-align: center;
 }
 
 footer a {
     color: #f5f107;
-    text-decoration: underline;
-    font-weight: 600;
-    transition: all 0.3s ease-in-out;
-    text-decoration: none;
     font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
 }
 
 footer a:hover {
@@ -498,10 +306,20 @@ footer a:hover {
 
 .menu-icon {
     display: none;
-    font-size: xx-large;
 }
 
-/* Responsive media queries */
+.radios {
+    display: flex;
+    gap: 5%;
+}
+
+.buttons {
+    text-align: right;
+    margin-top: 15px;
+}
+
+/* Media Queries */
+
 @media (max-width: 1200px) {
     section {
         padding: 2rem 1rem;
@@ -527,7 +345,7 @@ footer a:hover {
     }
 }
 
-/* Media Queries */
+/*Tablet*/
 @media (max-width: 768px) {
     .nav-toggle {
         display: block;
@@ -535,6 +353,7 @@ footer a:hover {
 
     .menu-icon {
         display: flex;
+        font-size: xx-large;
     }
 
     .nav-links {
@@ -553,5 +372,20 @@ footer a:hover {
 
     .miembro_equipo {
         width: 100%;
+    }
+
+    .productos-img {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/*Movil*/
+@media (max-width: 500px) {
+    .radios {
+        flex-direction: column;
+    }
+
+    .productos-img {
+        grid-template-columns: repeat(1, 1fr);
     }
 }

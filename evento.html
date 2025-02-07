@@ -33,21 +33,33 @@
         </nav>
     </header>
 
-    <main class="evento">
+    <main class="contenido">
         <h1>Preparación de eventos</h1>
         <section>
             <div>
                 <form action="" method="post">
-                    <label class="evento">Tipo de Evento</label>
+                    <label for="id_evento">ID Evento</label><sup>*</sup>
+                    <input type="number" name="id_evento" id="id_evento" required autofocus>
+
+                    <label for="sucursal_evento">ID Sucursal</label><sup>*</sup>
+                    <input type="number" name="sucursal" id="sucursal" required placeholder="ID de la sucursal">
+
+                    <label class="evento">Tipo de Evento</label><sup>*</sup>
                     <div class="radios">
-                        <input type="radio" name="evento" value="boda" id="boda">
-                        <label for="boda">Boda</label>
+                        <div>
+                            <input type="radio" name="evento" value="boda" id="boda" required>
+                            <label for="boda">Boda</label>
+                        </div>
 
-                        <input type="radio" name="evento" value="empresa" id="empresa">
-                        <label for="empresa">Cena de Empresa</label>
+                        <div>
+                            <input type="radio" name="evento" value="empresa" id="empresa">
+                            <label for="empresa">Cena de Empresa</label>
+                        </div>
 
-                        <input type="radio" name="evento" value="cumpleaños" id="cumpleaños">
-                        <label for="cumpleaños">Cumpleaños</label>
+                        <div>
+                            <input type="radio" name="evento" value="cumpleaños" id="cumpleaños">
+                            <label for="cumpleaños">Cumpleaños</label>
+                        </div>
                     </div>
                     
                     <label for="asistentes">Nº Asistentes:</label>
@@ -62,13 +74,7 @@
                     <label for="fecha_evento">Fecha:</label>
                     <input type="date" name="fecha" id="fecha">
 
-                    <label for="id_evento">ID Evento:</label>
-                    <input type="number" name="id_evento" id="id_evento" required>
-
-                    <label for="sucursal_evento">Sucursal:</label>
-                    <input type="number" name="sucursal" id="sucursal" required placeholder="ID de la sucursal">
-
-                    <div style="text-align: right;">
+                    <div class="buttons">
                         <input type="submit" value="Enviar">
                         <input type="reset" value="Borrar">
                     </div>

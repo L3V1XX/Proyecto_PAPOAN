@@ -37,25 +37,22 @@
         <h1>Promociones</h1>
         <section>
             <form action="" method="post">
-                <label for="IdentificacionPromo">ID</label>
+                <label for="IdentificacionPromo">ID</label><sup>*</sup>
                 <input type="number" id="IdentificacionPromo" name="IdentificacionPromo" placeholder="0123456789" required autofocus>
-                <sup>*</sup>
                 <br>
-                <label for="FInicio">Fecha Inicio</label>
+                <label for="FInicio">Fecha Inicio</label><sup>*</sup>
                 <input type="date" id="FInicio" name="FInicio" required>
-                <sup>*</sup>
                 <br>
                 <label for="FFin">Fecha Fin</label>
                 <input type="date" id="FFin" name="FFin">
                 <br>
-                <label for="Sucursal">Sucursal</label>
+                <label for="Sucursal">Sucursal</label><sup>*</sup>
                 <input type="number" id="Sucursal" name="Sucursal" placeholder="0123456789" required>
-                <sup>*</sup>
-                <br><br>
+                <br>
                 <label for="descripcionPromo">Descripcion:</label>
                 <br>
                 <textarea id="descripcionPromo" maxlength="200" rows="4" cols="70" placeholder="Descripcion de la promocion"></textarea>
-                <div>
+                <div class="buttons">
                     <input type="submit" value="Enviar">
                     <input type="reset" value="Borrar">
                 </div>
