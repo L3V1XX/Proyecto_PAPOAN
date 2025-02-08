@@ -210,11 +210,6 @@ sup {
 }
 
 /* Estilo para la sección "Sobre Nosotros" */
-.sobre_nosotros {
-    padding: 2rem;
-    background-color: #f4f4f4;
-}
-
 .equipo {
     display: flex;
     justify-content: center;
@@ -263,10 +258,11 @@ footer {
     font-size: 0.9rem;
 }
 
-footer p {
+footer a, footer p {
     margin: 0;
     line-height: 1.5;
     font-weight: 500;
+    
 }
 
 footer a {
@@ -342,7 +338,7 @@ footer a:hover {
 }
 
 /*Tablet*/
-@media only screen and (max-width: 768px) and (min-width: 500px) {
+@media only screen and (max-width: 768px){
     .nav-toggle {
         display: block;
     }
