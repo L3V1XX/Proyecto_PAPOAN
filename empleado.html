@@ -36,15 +36,15 @@
         <section class="welcome">
             <h1>Portal del Empleado.</h1>
             <p style="margin-bottom: 3px;">¡Bienvenido a nuestro portal de empleados!</p>
-            <form class="grid_form" method="post">
+            <form id="form" class="grid_form" method="post" novalidate>
                 <div>
                     <label for="dni_empleado">DNI</label><sup>*</sup>
-                    <input type="text" name="dni_empleado" id="dni_empleado" minlength="9" maxlength="9" autofocus required placeholder="Ej: 12345678N">
-
+                    <input type="text" name="dni_empleado" id="dni_empleado" minlength="9" maxlength="9" pattern="^[0-9]{8}[A-Za-z]$" autofocus required placeholder="Ej: 12345678N">
                 </div>
                 <div>
                     <label for="sucursal_empleado">Sucursal</label><sup>*</sup>
                     <select name="sucursal_empleado" id="sucursal_empleado" required>
+                        <option value="" disabled selected>Selecciona una sucursal</option>
                         <option value="sucursal1">Sucursal1</option>
                         <option value="sucursal2">Sucursal2</option>
                         <option value="sucursal3">Sucursal3</option>
@@ -65,6 +65,7 @@
                 <div>
                     <label for="genero_empleado">Género</label>
                     <select name="genero_empleado" id="genero_empleado">
+                        <option value="" disabled selected>Selecciona un género</option>
                         <option value="masculino">Masculino</option>
                         <option value="femenino">Femenino</option>
                         <option value="otros">Otros</option>
@@ -74,16 +75,18 @@
                     <label for="rol_empleado">Rol</label>
 
                     <select name="rol_empleado" id="rol_empleado" onchange="rolEmpleado()">
-                        <option selected value="Cocinero">Cocinero</option>
+                        <option value="" disabled selected>Selecciona un rol</option>
+                        <option value="Cocinero">Cocinero</option>
                         <option value="Dependiente">Dependiente</option>
                     </select>
 
                 </div>
 
-                <div id="Cocinero">
+                <div id="Cocinero" style="display: none;">
                     <div>
                         <label for="especialidad_cocinero"> Especialidad</label>
                         <select name="especialidad_cocinero" id="especialidad_cocinero">
+                            <option value="" disabled selected>Selecciona una especialidad</option>
                             <option value="producto1">Producto1</option>
                             <option value="producto2">Producto2</option>
                         </select>
@@ -97,6 +100,7 @@
                     <label for="color_dependiente">Color:</label>
                     <select name="color_dependiente"
                         id="color_dependiente">
+                        <option value="" disabled selected>Selecciona un color</option>
                         <option value="rojo">Rojo</option>
                         <option value="negro">Negro</option>
                         <option value="amarillo">Amarillo</option>
@@ -104,7 +108,7 @@
                 </div>
 
                 <div class="buttons">
-                    <input type="submit" value="Enviar">
+                    <input type="submit" onclick="return validarFormulario(this.closest('form').id), false" value="Enviar">
                     <input type="reset" value="Borrar">
                 </div>
             </form>

@@ -36,15 +36,15 @@
         <p>¡Bienvenido a nuestro portal de productos!</p>
         <section>
             <div>
-                <form action="" method="post">
+                <form id="form" action="" method="post" novalidate>
                     <label for="id_evento">ID Evento</label><sup>*</sup>
-                    <input type="number" name="id_evento" id="id_evento" required autofocus placeholder="ID del evento">
+                    <input type="number" name="id_evento" id="id_evento" min="1" pattern="^(?!0$)[0-9]+$" required autofocus placeholder="ID del evento">
 
                     <label for="sucursal_evento">ID Sucursal</label><sup>*</sup>
-                    <input type="number" name="sucursal" id="sucursal" required placeholder="ID de la sucursal">
+                    <input type="number" name="sucursal" id="sucursal" min="1" pattern="^(?!0$)[0-9]+$" required placeholder="ID de la sucursal">
 
-                    <label class="evento">Tipo de Evento</label><sup>*</sup>
-                    <div class="tipoEvento">
+                    <label for="eventos" class="evento">Tipo de Evento</label><sup>*</sup>
+                    <div id="eventos" class="tipoEvento">
                         <div>
                             <input type="radio" name="evento" value="boda" id="boda" onchange="tipoEvento()" required>
                             <label for="boda">Boda</label>
@@ -80,7 +80,7 @@
                     <input type="date" name="fecha" id="fecha">
 
                     <div class="buttons">
-                        <input type="submit" value="Enviar">
+                        <input type="submit" onclick="return validarFormulario(this.closest('form').id), false" value="Enviar">
                         <input type="reset" value="Borrar">
                     </div>
                 </form>
