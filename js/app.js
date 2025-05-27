@@ -17,12 +17,7 @@ function rolEmpleado() {
 
 /* Selección del radio button de evento para que salga el correspondiente label */
 function tipoEvento() {
-    let evento;
-    document.getElementsByName("evento").forEach((item) => {
-        if(item.checked) {
-            evento = item.value;
-        }
-    });
+    let evento = document.querySelector("input[name='evento']:checked").value;
     
     let boda = document.getElementById("comida_boda");
     let empresa = document.getElementById("cena_empresa");
@@ -48,3 +43,43 @@ function toggleMenu() {
     const menu = document.querySelector('.nav-links');
     menu.style.display = menu.style.display === 'flex' ? '' : 'flex';
 };
+
+function validarFormulario(formId) {
+    let elementos = document.querySelectorAll(`#${formId} [required], #${formId} [pattern]`)
+    
+    elementos.forEach(element => {
+        if ((element.type === "radio" || element.type === "checkbox")) {
+            validarSeleccionado(element.name, formId);
+        } else if(element.value || element.required) {
+            validacionElemento(element);
+        }
+    });
+    
+}
+
+function validacionElemento(elemento) {
+    let pattern = elemento.getAttribute("pattern") || "";
+    let regex = new RegExp(pattern);
+    let result = false;
+
+    if(!regex.test(elemento.value) || (elemento.required && !elemento.value)) {
+        elemento.style = "background-color: red";
+    } else  {
+        elemento.style = "";
+    }
+
+    return result;
+}
+
+function validarSeleccionado(name, formId) {
+    let grupo = document.querySelectorAll(`#${formId} input[name="${name}"]`);
+    let algunoSeleccionado = Array.from(grupo).some(input => input.checked);
+
+    if (!algunoSeleccionado) {
+        grupo.forEach(input => input.style="outline: 2px solid red");
+    } else {
+        grupo.forEach(input => input.style = "outline: none");
+    }
+
+    return algunoSeleccionado;
+}

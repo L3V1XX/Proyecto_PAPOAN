@@ -36,25 +36,25 @@
         <section class="welcome">
             <h1>Portal de Sucursales</h1>
             <p style="margin-bottom: 3%;">¡Bienvenido a nuestro portal de sucursales!</p>
-            <form class="grid_form" method="post">
+            <form id="form" class="grid_form" method="post">
                 <div>
                     <label for="nombre_sucursal">Nombre</label>
                     <input type="text" name="nombre_sucursal" id="nombre_sucursal" autofocus placeholder="Ej: Restaurante Papoan">
                 </div>
                 <div>
                     <label for="tel_sucursal">Teléfono</label>
-                    <input type="tel" name="tel_sucursal" id="tel_sucursal">
+                    <input type="tel" name="tel_sucursal" id="tel_sucursal" maxlength="9" pattern="^[6-9][0-9]{8}$">
                 </div>
                 <div>
                     <label for="gerente_sucursal">Gerente</label><sup>*</sup>
-                    <input type="text" name="gerente_sucursal" id="gerente_sucursal" minlength="9" maxlength="9" required placeholder="Ej: 123456789">
+                    <input type="text" name="gerente_sucursal" id="gerente_sucursal" minlength="9" maxlength="9" pattern="^[0-9]{8}[A-Za-z]$" required placeholder="Ej: 12345678N">
                 </div>
                 <div class="direccion">
                     <label for="dir_sucursal">Dirección</label>
                     <input placeholder="Av. de la Libertad, 11, Dos Hermanas, Sevilla" style="width: 100%;" type="text" name="dir_sucursal" id="dir_sucursal">
                 </div>
                 <div class="buttons">
-                    <input type="submit" value="Enviar">
+                    <input type="submit" onclick="return validarFormulario(this.closest('form').id), false" value="Enviar">
                     <input type="reset" value="Borrar">
                 </div>
             </form>

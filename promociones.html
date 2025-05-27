@@ -36,9 +36,9 @@
         <h1>Promociones</h1>
         <p>Bienvenido a nuestras promociones</p>
         <section>
-            <form action="" method="post">
+            <form id="form" action="" method="post" novalidate>
                 <label for="IdentificacionPromo">ID</label><sup>*</sup>
-                <input type="number" id="IdentificacionPromo" name="IdentificacionPromo" placeholder="Ej: 1" required autofocus>
+                <input type="number" id="IdentificacionPromo" name="IdentificacionPromo" min="1" pattern="^(?!0$)[0-9]+$"  placeholder="Ej: 1" required autofocus>
                 <br>
                 <label for="FInicio">Fecha Inicio</label><sup>*</sup>
                 <input type="date" id="FInicio" name="FInicio" required>
@@ -47,13 +47,13 @@
                 <input type="date" id="FFin" name="FFin">
                 <br><br>
                 <label for="Sucursal">Sucursal</label><sup>*</sup>
-                <input type="number" id="Sucursal" name="Sucursal" placeholder="Ej: 1" required>
+                <input type="number" id="Sucursal" name="Sucursal" min="1" pattern="^(?!0$)[0-9]+$" placeholder="Ej: 1" required>
                 <br>
                 <label for="descripcionPromo">Descripcion</label>
                 <br>
                 <textarea id="descripcionPromo" maxlength="200" rows="4" cols="70" placeholder="Descripcion de la promocion"></textarea>
                 <div class="buttons">
-                    <input type="submit" value="Enviar">
+                    <input type="submit" onclick="return validarFormulario(this.closest('form').id), false" value="Enviar">
                     <input type="reset" value="Borrar">
                 </div>
             </form>
