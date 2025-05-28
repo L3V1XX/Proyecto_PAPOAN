@@ -23,19 +23,28 @@ function tipoEvento() {
     let empresa = document.getElementById("cena_empresa");
     let cumple = document.getElementById("cumple");
 
-    if (evento == "boda") {
-        boda.style = "";
-        empresa.style = "display: none;"
-        cumple.style = "display: none;"
-    } else if(evento == "empresa") {
-        empresa.style = "";
-        boda.style = "display: none;"
-        cumple.style = "display: none;"
-    }  else if(evento == "cumpleaños") {
-        cumple.style = "";
-        boda.style = "display: none;"
-        empresa.style = "display: none;"
-    }  
+    switch (evento) {
+        case "boda":
+            boda.style = "";
+            empresa.style = "display: none;"
+            cumple.style = "display: none;"
+            break;
+        case "empresa":
+            empresa.style = "";
+            boda.style = "display: none;"
+            cumple.style = "display: none;"
+            break;
+        case "cumpleaños":
+            cumple.style = "";
+            boda.style = "display: none;"
+            empresa.style = "display: none;"
+            break;
+        default:
+            boda.style = "display: none;"
+            empresa.style = "display: none;"
+            cumple.style = "display: none;"
+        break;
+    } 
 }
 
 /* Con esto podemos hacer el toggle del menu */
@@ -49,11 +58,10 @@ function toggleMenu() {
 // ========================================
 
 const MENSAJES_ERROR = {
-    // Mensaje genérico
+
     obligatorio: 'Este campo es obligatorio',
     formato: 'El formato del campo no es válido',
     
-    // Mensajes específicos por campo
     dni_empleado: {
         obligatorio: 'El DNI es obligatorio',
         formato: 'El DNI debe tener 8 números seguidos de una letra (ej: 12345678N)'
@@ -73,7 +81,6 @@ const MENSAJES_ERROR = {
         formato: 'El ID de la sucursal debe ser un número positivo mayor que 0'
     },
     
-    // Mensajes para grupos de radio/checkbox
     evento: {
         obligatorio: 'Debe seleccionar un tipo de evento'
     }
@@ -87,12 +94,9 @@ function validarCamposObligatorios(formId) {
     let elementosObligatorios = document.querySelectorAll(`#${formId} [required]`);
     let formularioValido = true;
     
-
     limpiarMensajesError();
     
-    
     let gruposProcesados = new Set();
-    
     
     elementosObligatorios.forEach(elemento => {
         elemento.style = "";
@@ -162,16 +166,12 @@ function validarCampoIndividual(elemento) {
     }
     
     if (!esValido) {
-        // Aplicar estilos de error
         elemento.style = "background-color: #ffeeee; border: 1px solid red";
-        
-        // Obtener mensaje específico para el campo
+
         let mensajeError = obtenerMensajeError(elemento.id || elemento.name, tipoError, false);
-        
-        // Mostrar mensaje de error
+
         mostrarMensajeErrorCampo(elemento, mensajeError);
     }
-    
     return esValido;
 }
 
@@ -185,8 +185,6 @@ function obtenerMensajeError(nombreCampo, tipoError) {
     if (MENSAJES_ERROR[tipoError]) {
         return MENSAJES_ERROR[tipoError];
     }
-    
-    // Fallback al mensaje obligatorio
     return MENSAJES_ERROR.obligatorio;
 }
 
@@ -200,7 +198,7 @@ function mostrarMensajeErrorGrupo(nombreGrupo, mensajeError) {
 
     if (contenedor && !contenedor.querySelector('.mensaje-obligatorio')) {
         const mensaje = crearMensajeError(mensajeError);
-        contenedor.appendChild(mensaje);
+        contenedor.append(mensaje);
     }
 }
 
