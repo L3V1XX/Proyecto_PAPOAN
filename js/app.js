@@ -204,7 +204,7 @@ function mostrarMensajeErrorGrupo(nombreGrupo, mensajeError) {
 
 function mostrarMensajeErrorCampo(elemento, mensajeError) {
     const mensaje = crearMensajeError(mensajeError);
-    elemento.parentNode.insertBefore(mensaje, elemento.nextSibling);
+    elemento.parentNode.appendChild(mensaje);   
 }
 
 function crearMensajeError(texto) {
