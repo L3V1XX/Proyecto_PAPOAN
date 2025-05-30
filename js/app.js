@@ -87,7 +87,7 @@ const MENSAJES_ERROR = {
 };
 
 // ========================================
-// FUNCIÓN DE VALIDACIÓN
+//         FUNCIÓN DE VALIDACIÓN
 // ========================================
 
 function validarCamposObligatorios(formId) {
@@ -115,7 +115,7 @@ function validarCamposObligatorios(formId) {
 }
 
 // ========================================
-// FUNCIONES AUXILIARES DE VALIDACIÓN
+//  FUNCIONES AUXILIARES DE VALIDACIÓN
 // ========================================
 
 function limpiarMensajesError() {
